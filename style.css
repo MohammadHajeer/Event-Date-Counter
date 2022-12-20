@@ -1,0 +1,236 @@
+:root {
+  --main-color: #2196f3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #272727;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.counter {
+  border: 1px solid;
+  max-width: 500px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 10px;
+  background-color: black;
+  box-shadow: 0 0 5px var(--main-color);
+  position: relative;
+}
+
+.counter h1 {
+  color: white;
+  text-align: center;
+}
+
+.counter h1 span {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+.counter .move {
+  position: absolute;
+  background-color: var(--main-color);
+  box-shadow: 0 0 10px var(--main-color);
+  transition: 0.5s;
+}
+
+.counter .top,
+.bottom {
+  width: 100%;
+  height: 3px;
+  left: 0;
+}
+
+.counter .top {
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.counter:hover .top {
+  transform: scaleX(1);
+}
+
+.counter .bottom {
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition-delay: 1s;
+}
+
+.counter:hover .bottom {
+  transform: scaleX(1);
+}
+
+.counter .right,
+.left {
+  top: 0;
+  height: 100%;
+  width: 4px;
+}
+
+.counter .right {
+  right: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition-delay: 0.5s;
+}
+
+.counter:hover .right {
+  transform: scaleY(1);
+}
+
+.counter .left {
+  left: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition-delay: 1.5s;
+}
+
+.counter:hover .left {
+  transform: scaleY(1);
+}
+
+.counter .inputs {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.counter .inputs input {
+  flex-grow: 2;
+  height: 50px;
+  font-size: 1rem;
+  outline: none;
+  padding: 20px;
+  background-color: rgb(36, 36, 36);
+  border: none;
+  color: var(--main-color);
+  transition: 0.5s;
+}
+
+.counter .inputs button {
+  flex-grow: 1;
+  background-color: var(--main-color);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.counter .time {
+  display: flex;
+  flex-basis: 25%;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.counter .time > span {
+  flex-basis: 24%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1b1b1b;
+  color: white;
+  height: 80px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  min-width: 100px;
+}
+
+.counter .time span span {
+  font-size: 1.6rem;
+  color: var(--main-color);
+}
+
+#clear {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 10px 50px;
+  font-weight: bolder;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.clear {
+  text-align: center;
+}
+
+.dates-history {
+  color: white;
+  max-width: 500px;
+  background-color: black;
+  border: 1px solid var(--main-color);
+  box-shadow: 0 0 5px var(--main-color);
+}
+
+.dates-history table {
+  width: 100%;
+  text-align: center;
+}
+
+.dates-history h2 {
+  color: var(--main-color);
+  font-weight: bold;
+  background-color: #000;
+  padding: 10px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dates-history h2 button {
+  border: 1px solid var(--main-color);
+  background: var(--main-color);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 20%;
+}
+
+.dates-history h2 button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: skew(-20deg) rotate(-10deg);
+}
+
+.dates-history table tr td {
+  padding: 5px;
+  background-color: #292929;
+}

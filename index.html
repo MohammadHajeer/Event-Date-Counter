@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Count Down</title>
+</head>
+
+<body>
+  <div class="counter">
+    <h1>Event Time <span>Counter</span></h1>
+    <div class="inputs">
+      <input id="date" type="text" placeholder="Enter a date" />
+      <button id="start">Start</button>
+    </div>
+
+    <div class="time">
+      <span class="days"><span>00</span>days</span>
+      <span class="hours"><span>00</span>hours</span>
+      <span class="minutes"><span>00</span>minutes</span>
+      <span class="seconds"><span>00</span>seconds</span>
+    </div>
+    <div class="clear">
+      <button id="clear">Clear</button>
+    </div>
+    <span class="top move"></span>
+    <span class="right move"></span>
+    <span class="bottom move"></span>
+    <span class="left move"></span>
+  </div>
+  <div class="dates-history">
+    <h2>Dates History <button>Clear</button></h2>
+    <table></table>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
